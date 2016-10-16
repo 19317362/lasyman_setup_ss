@@ -268,6 +268,8 @@ function start_ss()
 	echo "setup firewall..."
 	# setup_firewall
 	#add start-up
+	mkdir /etc/rc.d
+	
 	echo "cd /root/shadowsocks/shadowsocks;python server.py > /dev/null 2>&1 &" >> /etc/rc.d/rc.local
 	echo "/etc/init.d/httpd start" >> /etc/rc.d/rc.local
 	echo "/etc/init.d/mysqld start" >> /etc/rc.d/rc.local
